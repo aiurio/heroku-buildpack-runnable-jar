@@ -23,7 +23,6 @@ function github_releases_download {
 
 function file_download {
   cp $ARTIFACT_URL application.jar
-  ls
 }
 
 function generic_download {
