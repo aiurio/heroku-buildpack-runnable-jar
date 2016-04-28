@@ -21,6 +21,10 @@ function github_releases_download {
     wget --header 'Accept:application/octet-stream' -O application.jar "${ARTIFACT_URL}?access_token=${GITHUB_ACCESS_TOKEN}"
 }
 
+function file_download {
+  cp $ARTIFACT_URL application.jar
+}
+
 function generic_download {
     wget -q -O application.jar $ARTIFACT_URL
 }
@@ -34,6 +38,9 @@ case $DOWNLOAD_FROM in
       echo "-----> Downloading $ARTIFACT_URL from Snap CI"
       snap_download
       ;;
+    file)
+      echo "-----> Downloading $ARTIFACT_URL from Snap CI"
+      file_download
     *)
       echo "-----> Downloading $ARTIFACT_URL"
       generic_download
