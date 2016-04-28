@@ -23,6 +23,7 @@ function github_releases_download {
 
 function file_download {
   cp $ARTIFACT_URL application.jar
+  echo "Copy complete..."
 }
 
 function generic_download {
@@ -47,3 +48,4 @@ case $DOWNLOAD_FROM in
       generic_download
       ;;
 esac
+echo "Exited Case"
