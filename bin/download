@@ -41,6 +41,7 @@ case $DOWNLOAD_FROM in
     file)
       echo "-----> Downloading $ARTIFACT_URL from Snap CI"
       file_download
+      ;;
     *)
       echo "-----> Downloading $ARTIFACT_URL"
       generic_download
