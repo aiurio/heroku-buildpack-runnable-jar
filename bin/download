@@ -23,6 +23,7 @@ function github_releases_download {
 
 function file_download {
   cp $ARTIFACT_URL application.jar
+  ls
 }
 
 function generic_download {
@@ -39,7 +40,7 @@ case $DOWNLOAD_FROM in
       snap_download
       ;;
     file)
-      echo "-----> Downloading $ARTIFACT_URL from Snap CI"
+      echo "-----> Copying $ARTIFACT_URL to application.jar"
       file_download
       ;;
     *)
