@@ -9,9 +9,7 @@ cat <<EOF
 ---
 config_vars:
   JAVA_OPTS: -Xmx1024m -Xss1024k -XX:+UseCompressedOops
-
+default_process_types:
+  web: bin/java $JAVA_OPTS -jar application.jar $CMD_ARGS
 
 EOF
-
-echo "-----> Starting application.jar"
-java $JAVA_OPTS -jar application.jar $CMD_ARGS
