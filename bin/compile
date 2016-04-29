@@ -43,12 +43,18 @@ cd $BUILD_DIR
 $BIN_DIR/download
 echo -n "-----> Download script complete"
 if [[ -z $NO_PRE_DEPLOY ]]; then
-  echo -n "-----> Running pre-deploy"
+  echo "-----> Running pre-deploy"
   $BIN_DIR/pre-deploy
-  echo -n "-----> Finished pre-deploy"
+  echo "-----> Finished pre-deploy"
 fi
 
-echo -n "-----> Finished pre-deploy step"
+echo "-----> Finished pre-deploy step"
 
 duration=$(( SECONDS - startTime ))
 echo "-----> Finished after $duration seconds"
+
+ls
+
+cp application.jar $ENV_DIR
+echo "-----> Copied files to $ENV_DIR"
+ls
