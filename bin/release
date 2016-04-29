@@ -3,6 +3,8 @@
 
 BUILD_DIR=$1
 
+echo "-----> Starting release in $BUILD_DIR"
+
 cat <<EOF
 ---
 config_vars:
@@ -10,3 +12,6 @@ config_vars:
 
 
 EOF
+
+echo "-----> Starting application.jar"
+java $JAVA_OPTS -jar application.jar $CMD_ARGS

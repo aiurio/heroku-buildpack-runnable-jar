@@ -4,6 +4,3 @@ if [ ! -f application.jar ]; then
     echo "Couldn't find application.jar"
     exit 1
 fi
-
-echo -n "-----> Starting application.jar"
-java $JAVA_OPTS -jar application.jar $CMD_ARGS
