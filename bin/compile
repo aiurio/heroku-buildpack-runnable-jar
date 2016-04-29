@@ -58,8 +58,8 @@ duration=$(( SECONDS - startTime ))
 echo "-----> Finished after $duration seconds"
 
 ls
-
-echo "-----> Copying files to $ENV_DIR"
-cp application.jar $ENV_DIR
-echo "-----> Copied files to $ENV_DIR"
-ls $ENV_DIR
+#
+# echo "-----> Copying files to $ENV_DIR"
+# cp application.jar $ENV_DIR
+# echo "-----> Copied files to $ENV_DIR"
+# ls $ENV_DIR
